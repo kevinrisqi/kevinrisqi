@@ -1,7 +1,7 @@
 - 👋 Hi, I’m Kevin
-- 👀 I’m interested in mobile development & Backend Engineer
-- 🌱 I’m currently learning dart & node js as a backend
-- 💞️ I’m looking to collaborate on mobile / backend app
+- 👀 I’m interested in Mobile Development
+- 🌱 I’m currently learning Dart as a frontend mobile app
+- 💞️ I’m looking to collaborate on mobile app
 
 <!---
 kevinrisqi/kevinrisqi is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
