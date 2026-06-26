@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320" width="1200" height="320" fill="none" role="img" aria-label="Kevin Risqi — Mobile Developer">
+  <defs>
+    <!-- Base background gradient -->
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0a1424"/>
+      <stop offset="45%" stop-color="#063b6b"/>
+      <stop offset="78%" stop-color="#02569B"/>
+      <stop offset="100%" stop-color="#0a1424"/>
+    </linearGradient>
+
+    <!-- Moving accent blob gradient -->
+    <radialGradient id="glowBlob" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#13B9FD" stop-opacity="0.55"/>
+      <stop offset="100%" stop-color="#13B9FD" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Text gradient white -> cyan -->
+    <linearGradient id="txt" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="55%" stop-color="#cdeeff"/>
+      <stop offset="100%" stop-color="#13B9FD"/>
+    </linearGradient>
+
+    <!-- Light sweep -->
+    <linearGradient id="sweep" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Dot grid -->
+    <pattern id="dots" width="30" height="30" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.3" fill="#ffffff" opacity="0.07"/>
+    </pattern>
+
+    <!-- Soft glow filter -->
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="7" result="b"/>
+      <feMerge>
+        <feMergeNode in="b"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <clipPath id="round"><rect width="1200" height="320" rx="24"/></clipPath>
+  </defs>
+
+  <style>
+    .name  { font-family: 'Segoe UI', Helvetica, Arial, sans-serif; font-weight: 800; }
+    .role  { font-family: 'Courier New', ui-monospace, monospace; font-weight: 700; }
+    .tag   { font-family: 'Courier New', ui-monospace, monospace; font-weight: 600; }
+
+    .fadeUp   { opacity: 0; animation: fadeUp 1s ease-out forwards; }
+    .fadeUp.d1 { animation-delay: .25s; }
+    .fadeUp.d2 { animation-delay: .55s; }
+    .fadeUp.d3 { animation-delay: .85s; }
+    .underline { transform: scaleX(0); transform-origin: 600px 0; animation: grow 1s ease-out .9s forwards; }
+
+    .sweep   { animation: sweep 6s ease-in-out infinite; }
+    .blob1   { animation: drift1 12s ease-in-out infinite; }
+    .blob2   { animation: drift2 14s ease-in-out infinite; }
+    .p       { animation: floaty 6s ease-in-out infinite, twinkle 4s ease-in-out infinite; }
+    .p2 { animation-delay: -1s, -.6s; }
+    .p3 { animation-delay: -2.4s, -1.8s; }
+    .p4 { animation-delay: -3.1s, -2.9s; }
+    .p5 { animation-delay: -4.5s, -3.4s; }
+    .p6 { animation-delay: -5.2s, -1.2s; }
+
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(22px);} to { opacity: 1; transform: translateY(0);} }
+    @keyframes grow   { to { transform: scaleX(1);} }
+    @keyframes sweep  { 0% { transform: translateX(-500px) skewX(-18deg);} 55%,100% { transform: translateX(1500px) skewX(-18deg);} }
+    @keyframes drift1 { 0%,100% { transform: translate(0,0);} 50% { transform: translate(60px,30px);} }
+    @keyframes drift2 { 0%,100% { transform: translate(0,0);} 50% { transform: translate(-70px,-25px);} }
+    @keyframes floaty { 0%,100% { transform: translateY(0);} 50% { transform: translateY(-14px);} }
+    @keyframes twinkle{ 0%,100% { opacity: .25;} 50% { opacity: .95;} }
+  </style>
+
+  <g clip-path="url(#round)">
+    <!-- Background -->
+    <rect width="1200" height="320" fill="url(#bg)"/>
+    <rect width="1200" height="320" fill="url(#dots)"/>
+
+    <!-- Drifting glow blobs -->
+    <circle class="blob1" cx="240" cy="90"  r="220" fill="url(#glowBlob)"/>
+    <circle class="blob2" cx="980" cy="240" r="240" fill="url(#glowBlob)"/>
+
+    <!-- Floating particles -->
+    <circle class="p p1" cx="120"  cy="70"  r="3"   fill="#9fe7ff"/>
+    <circle class="p p2" cx="300"  cy="240" r="2.4" fill="#ffffff"/>
+    <circle class="p p3" cx="540"  cy="60"  r="2"   fill="#9fe7ff"/>
+    <circle class="p p4" cx="880"  cy="90"  r="3"   fill="#ffffff"/>
+    <circle class="p p5" cx="1040" cy="200" r="2.4" fill="#9fe7ff"/>
+    <circle class="p p6" cx="700"  cy="250" r="2"   fill="#ffffff"/>
+
+    <!-- Light sweep -->
+    <rect class="sweep" x="-200" y="0" width="220" height="320" fill="url(#sweep)"/>
+
+    <!-- Top tag -->
+    <text class="tag fadeUp" x="600" y="78" text-anchor="middle" font-size="18"
+          letter-spacing="6" fill="#7fd4ff">&#171; mobile&#160;developer &#183; indonesia &#187;</text>
+
+    <!-- Name -->
+    <text class="name fadeUp d1" x="600" y="170" text-anchor="middle" font-size="74"
+          letter-spacing="10" fill="url(#txt)" filter="url(#glow)">KEVIN RISQI</text>
+
+    <!-- Underline accent -->
+    <rect class="underline" x="430" y="192" width="340" height="3" rx="2" fill="#13B9FD"/>
+
+    <!-- Role -->
+    <text class="role fadeUp d2" x="600" y="238" text-anchor="middle" font-size="24"
+          letter-spacing="3" fill="#e6f6ff">Flutter &amp; Dart Enthusiast</text>
+
+    <!-- Stack line -->
+    <text class="tag fadeUp d3" x="600" y="276" text-anchor="middle" font-size="15"
+          letter-spacing="4" fill="#6fb8e6">Flutter &#8226; Dart &#8226; React &#8226; Node.js &#8226; Laravel</text>
+
+    <!-- Border -->
+    <rect x="1" y="1" width="1198" height="318" rx="23" fill="none" stroke="#1f6fb2" stroke-opacity="0.5" stroke-width="1.5"/>
+  </g>
+</svg>
