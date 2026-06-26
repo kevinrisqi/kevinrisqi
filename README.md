@@ -79,25 +79,19 @@ class Developer {
 
 </div>
 
-<!-- ===================== TROPHIES ===================== -->
-## 🏆 GitHub Trophies
+<!-- ===================== HIGHLIGHTS ===================== -->
+## 🏆 Highlights
 
-<div align="center">
-
-<img src="https://github-profile-trophy.vercel.app/?username=kevinrisqi&theme=tokyonight&no-frame=true&no-bg=true&margin-w=4&column=7" alt="trophies" />
-
-</div>
+<p align="center">
+  <img width="100%" src="./assets/highlights.svg" alt="Highlights — Kevin Risqi" />
+</p>
 
 <!-- ===================== SNAKE ANIMATION ===================== -->
 ## 🐍 Contribution Snake
 
 <div align="center">
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/kevinrisqi/kevinrisqi/output/github-contribution-grid-snake-dark.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/kevinrisqi/kevinrisqi/output/github-contribution-grid-snake.svg" />
-  <img alt="github contribution snake animation" src="https://raw.githubusercontent.com/kevinrisqi/kevinrisqi/output/github-contribution-grid-snake.svg" />
-</picture>
+<img alt="github contribution snake animation" src="https://raw.githubusercontent.com/kevinrisqi/kevinrisqi/output/github-contribution-grid-snake-dark.svg" />
 
 </div>
 
